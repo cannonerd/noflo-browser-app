@@ -3,12 +3,12 @@
   "description": "The best project ever.",
   "version": "0.1.0",
   "author": {
-    "name": "Jon Nordby",
-    "email": "jononor@gmail.com"
+    "name": "suski",
+    "email": "suski"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/noflo/noflo-browser-app.git"
+    "url": "git://github.com/cannonerd/noflo-browser-app.git"
   },
   "licenses": [
     {
