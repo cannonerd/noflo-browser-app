@@ -16173,7 +16173,7 @@ module.exports = function(address, options, dontstart) {
 };
 
 });
-require.register("noflo-browser-app/index.js", function(exports, require, module){
+require.register("c-base-workshop-test/index.js", function(exports, require, module){
 /*
  * This file can be used for general library features of noflo-browser-app.
  *
@@ -16182,22 +16182,22 @@ require.register("noflo-browser-app/index.js", function(exports, require, module
  */
 
 });
-require.register("noflo-browser-app/graphs/main.json", function(exports, require, module){
+require.register("c-base-workshop-test/graphs/main.json", function(exports, require, module){
 module.exports = JSON.parse('{"properties":{"name":"main","environment":{"type":"noflo-browser","content":"<p id=\\"output\\"> Default output </p>\\n<button id=\\"button1\\">write the text</button>\\n<button id=\\"button2\\">start timer</button>"},"icon":""},"inports":{},"outports":{},"groups":[],"processes":{"dom/GetElement_eqk7":{"component":"dom/GetElement","metadata":{"label":"dom/GetElement","x":360,"y":0,"width":72,"height":72}},"dom/WriteHtml_wsm88":{"component":"dom/WriteHtml","metadata":{"label":"dom/WriteHtml","x":684,"y":144,"width":72,"height":72}},"core/Output_vrms3":{"component":"core/Output","metadata":{"label":"core/Output","x":216,"y":468,"width":72,"height":72}},"core/Kick_tps40":{"component":"core/Kick","metadata":{"label":"core/Kick","x":540,"y":216,"width":72,"height":72}},"core/RunInterval_7gvtq":{"component":"core/RunInterval","metadata":{"label":"core/RunInterval","x":504,"y":-144,"width":72,"height":72}},"core/Drop_k3k6p":{"component":"core/Drop","metadata":{"label":"core/Drop","x":792,"y":-180,"width":72,"height":72}},"packets/Counter_owqu9":{"component":"packets/Counter","metadata":{"label":"packets/Counter","x":648,"y":-216,"width":72,"height":72}},"c-base-workshop-test/ListenClick":{"component":"c-base-workshop-test/ListenClick","metadata":{"label":"ListenClick","x":180,"y":-108,"width":72,"height":72}},"c-base-workshop-test/ListenClick_ohf8t":{"component":"c-base-workshop-test/ListenClick","metadata":{"label":"c-base-workshop-test/ListenClick","x":108,"y":144,"width":72,"height":72}}},"connections":[{"src":{"process":"dom/GetElement_eqk7","port":"error"},"tgt":{"process":"core/Output_vrms3","port":"in"},"metadata":{"route":10}},{"src":{"process":"core/Kick_tps40","port":"out"},"tgt":{"process":"dom/WriteHtml_wsm88","port":"html"},"metadata":{}},{"src":{"process":"core/RunInterval_7gvtq","port":"out"},"tgt":{"process":"packets/Counter_owqu9","port":"in"},"metadata":{"route":null}},{"src":{"process":"packets/Counter_owqu9","port":"count"},"tgt":{"process":"dom/WriteHtml_wsm88","port":"html"},"metadata":{}},{"src":{"process":"packets/Counter_owqu9","port":"out"},"tgt":{"process":"core/Drop_k3k6p","port":"in"},"metadata":{}},{"src":{"process":"c-base-workshop-test/ListenClick","port":"getelement_error"},"tgt":{"process":"core/Output_vrms3","port":"in"}},{"src":{"process":"c-base-workshop-test/ListenClick","port":"listenmouse_click"},"tgt":{"process":"core/RunInterval_7gvtq","port":"start"}},{"src":{"process":"c-base-workshop-test/ListenClick_ohf8t","port":"getelement_error"},"tgt":{"process":"core/Output_vrms3","port":"in"},"metadata":{}},{"src":{"process":"dom/GetElement_eqk7","port":"element"},"tgt":{"process":"dom/WriteHtml_wsm88","port":"container"},"metadata":{"route":null}},{"src":{"process":"c-base-workshop-test/ListenClick_ohf8t","port":"listenmouse_click"},"tgt":{"process":"core/Kick_tps40","port":"in"},"metadata":{}},{"data":"#output","tgt":{"process":"dom/GetElement_eqk7","port":"selector"}},{"data":"foo bar","tgt":{"process":"dom/WriteHtml_wsm88","port":"html"}},{"data":"foo bar","tgt":{"process":"core/Kick_tps40","port":"data"}},{"data":1000,"tgt":{"process":"core/RunInterval_7gvtq","port":"interval"}},{"data":true,"tgt":{"process":"packets/Counter_owqu9","port":"immediate"}},{"data":"#button1","tgt":{"process":"c-base-workshop-test/ListenClick_ohf8t","port":"selector"}},{"data":"#button2","tgt":{"process":"c-base-workshop-test/ListenClick","port":"selector"}}]}');
 });
-require.register("noflo-browser-app/graphs/ListenClick.json", function(exports, require, module){
+require.register("c-base-workshop-test/graphs/ListenClick.json", function(exports, require, module){
 module.exports = JSON.parse('{"properties":{"name":"ListenClick","environment":{"type":"noflo-browser"}},"inports":{"selector":{"process":"dom/GetElement_rxuw1","port":"selector","metadata":{"x":36,"y":-144,"width":72,"height":72}}},"outports":{"getelement_error":{"process":"dom/GetElement_rxuw1","port":"error","metadata":{"x":0,"y":0,"width":72,"height":72}},"listenmouse_click":{"process":"interaction/ListenMouse_af0f9","port":"click","metadata":{"x":0,"y":0,"width":72,"height":72}}},"groups":[],"processes":{"dom/GetElement_rxuw1":{"component":"dom/GetElement","metadata":{"label":"dom/GetElement","x":180,"y":-108,"width":72,"height":72}},"interaction/ListenMouse_af0f9":{"component":"interaction/ListenMouse","metadata":{"label":"interaction/ListenMouse","x":360,"y":-144,"width":72,"height":72}}},"connections":[{"src":{"process":"dom/GetElement_rxuw1","port":"element"},"tgt":{"process":"interaction/ListenMouse_af0f9","port":"element"},"metadata":{}},{"data":"#button2","tgt":{"process":"dom/GetElement_rxuw1","port":"selector"}}]}');
 });
-require.register("noflo-browser-app/graphs/main.json", function(exports, require, module){
+require.register("c-base-workshop-test/graphs/main.json", function(exports, require, module){
 module.exports = JSON.parse('{"properties":{"name":"main","environment":{"type":"noflo-browser","content":"<p id=\\"output\\"> Default output </p>\\n<button id=\\"button1\\">write the text</button>\\n<button id=\\"button2\\">start timer</button>"},"icon":""},"inports":{},"outports":{},"groups":[],"processes":{"dom/GetElement_eqk7":{"component":"dom/GetElement","metadata":{"label":"dom/GetElement","x":360,"y":0,"width":72,"height":72}},"dom/WriteHtml_wsm88":{"component":"dom/WriteHtml","metadata":{"label":"dom/WriteHtml","x":684,"y":144,"width":72,"height":72}},"core/Output_vrms3":{"component":"core/Output","metadata":{"label":"core/Output","x":216,"y":468,"width":72,"height":72}},"core/Kick_tps40":{"component":"core/Kick","metadata":{"label":"core/Kick","x":540,"y":216,"width":72,"height":72}},"core/RunInterval_7gvtq":{"component":"core/RunInterval","metadata":{"label":"core/RunInterval","x":504,"y":-144,"width":72,"height":72}},"core/Drop_k3k6p":{"component":"core/Drop","metadata":{"label":"core/Drop","x":792,"y":-180,"width":72,"height":72}},"packets/Counter_owqu9":{"component":"packets/Counter","metadata":{"label":"packets/Counter","x":648,"y":-216,"width":72,"height":72}},"c-base-workshop-test/ListenClick":{"component":"c-base-workshop-test/ListenClick","metadata":{"label":"ListenClick","x":180,"y":-108,"width":72,"height":72}},"c-base-workshop-test/ListenClick_ohf8t":{"component":"c-base-workshop-test/ListenClick","metadata":{"label":"c-base-workshop-test/ListenClick","x":108,"y":144,"width":72,"height":72}}},"connections":[{"src":{"process":"dom/GetElement_eqk7","port":"error"},"tgt":{"process":"core/Output_vrms3","port":"in"},"metadata":{"route":10}},{"src":{"process":"core/Kick_tps40","port":"out"},"tgt":{"process":"dom/WriteHtml_wsm88","port":"html"},"metadata":{}},{"src":{"process":"core/RunInterval_7gvtq","port":"out"},"tgt":{"process":"packets/Counter_owqu9","port":"in"},"metadata":{"route":null}},{"src":{"process":"packets/Counter_owqu9","port":"count"},"tgt":{"process":"dom/WriteHtml_wsm88","port":"html"},"metadata":{}},{"src":{"process":"packets/Counter_owqu9","port":"out"},"tgt":{"process":"core/Drop_k3k6p","port":"in"},"metadata":{}},{"src":{"process":"c-base-workshop-test/ListenClick","port":"getelement_error"},"tgt":{"process":"core/Output_vrms3","port":"in"}},{"src":{"process":"c-base-workshop-test/ListenClick","port":"listenmouse_click"},"tgt":{"process":"core/RunInterval_7gvtq","port":"start"}},{"src":{"process":"c-base-workshop-test/ListenClick_ohf8t","port":"getelement_error"},"tgt":{"process":"core/Output_vrms3","port":"in"},"metadata":{}},{"src":{"process":"dom/GetElement_eqk7","port":"element"},"tgt":{"process":"dom/WriteHtml_wsm88","port":"container"},"metadata":{"route":null}},{"src":{"process":"c-base-workshop-test/ListenClick_ohf8t","port":"listenmouse_click"},"tgt":{"process":"core/Kick_tps40","port":"in"},"metadata":{}},{"data":"#output","tgt":{"process":"dom/GetElement_eqk7","port":"selector"}},{"data":"foo bar","tgt":{"process":"dom/WriteHtml_wsm88","port":"html"}},{"data":"foo bar","tgt":{"process":"core/Kick_tps40","port":"data"}},{"data":1000,"tgt":{"process":"core/RunInterval_7gvtq","port":"interval"}},{"data":true,"tgt":{"process":"packets/Counter_owqu9","port":"immediate"}},{"data":"#button1","tgt":{"process":"c-base-workshop-test/ListenClick_ohf8t","port":"selector"}},{"data":"#button2","tgt":{"process":"c-base-workshop-test/ListenClick","port":"selector"}}]}');
 });
-require.register("noflo-browser-app/component.json", function(exports, require, module){
-module.exports = JSON.parse('{"name":"noflo-browser-app","description":"The best project ever.","author":"Jon Nordby <jononor@gmail.com>","repo":"noflo/noflo-browser-app","version":"0.1.0","keywords":[],"dependencies":{"noflo/noflo":"*","noflo/noflo-dom":"*","noflo/noflo-core":"*","noflo/noflo-interaction":"*","noflo/noflo-packets":"*","noflo/noflo-runtime-webrtc":"*"},"remotes":["https://raw.githubusercontent.com"],"scripts":["index.js","components/DoSomething.js","graphs/main.json","graphs/ListenClick.json"],"json":["graphs/main.json","component.json","graphs/ListenClick.json"],"noflo":{"graphs":{"ListenClick":"graphs/ListenClick.json","main":"graphs/main.json"},"components":{"DoSomething":"components/DoSomething.js"}}}');
+require.register("c-base-workshop-test/component.json", function(exports, require, module){
+module.exports = JSON.parse('{"name":"c-base-workshop-test","description":"The best project ever.","author":"Jon Nordby <jononor@gmail.com>","repo":"noflo/noflo-browser-app","version":"0.1.0","keywords":[],"dependencies":{"noflo/noflo":"*","noflo/noflo-dom":"*","noflo/noflo-core":"*","noflo/noflo-interaction":"*","noflo/noflo-packets":"*","noflo/noflo-runtime-webrtc":"*"},"remotes":["https://raw.githubusercontent.com"],"scripts":["index.js","components/DoSomething.js","graphs/main.json","graphs/ListenClick.json"],"json":["graphs/main.json","component.json","graphs/ListenClick.json"],"noflo":{"graphs":{"ListenClick":"graphs/ListenClick.json","main":"graphs/main.json"},"components":{"DoSomething":"components/DoSomething.js"}}}');
 });
-require.register("noflo-browser-app/graphs/ListenClick.json", function(exports, require, module){
+require.register("c-base-workshop-test/graphs/ListenClick.json", function(exports, require, module){
 module.exports = JSON.parse('{"properties":{"name":"ListenClick","environment":{"type":"noflo-browser"}},"inports":{"selector":{"process":"dom/GetElement_rxuw1","port":"selector","metadata":{"x":36,"y":-144,"width":72,"height":72}}},"outports":{"getelement_error":{"process":"dom/GetElement_rxuw1","port":"error","metadata":{"x":0,"y":0,"width":72,"height":72}},"listenmouse_click":{"process":"interaction/ListenMouse_af0f9","port":"click","metadata":{"x":0,"y":0,"width":72,"height":72}}},"groups":[],"processes":{"dom/GetElement_rxuw1":{"component":"dom/GetElement","metadata":{"label":"dom/GetElement","x":180,"y":-108,"width":72,"height":72}},"interaction/ListenMouse_af0f9":{"component":"interaction/ListenMouse","metadata":{"label":"interaction/ListenMouse","x":360,"y":-144,"width":72,"height":72}}},"connections":[{"src":{"process":"dom/GetElement_rxuw1","port":"element"},"tgt":{"process":"interaction/ListenMouse_af0f9","port":"element"},"metadata":{}},{"data":"#button2","tgt":{"process":"dom/GetElement_rxuw1","port":"selector"}}]}');
 });
-require.register("noflo-browser-app/components/DoSomething.js", function(exports, require, module){
+require.register("c-base-workshop-test/components/DoSomething.js", function(exports, require, module){
 var noflo;
 
 noflo = require('noflo');
@@ -16582,27 +16582,27 @@ module.exports = {
 
 
 
-require.alias("noflo-noflo/src/lib/Graph.js", "noflo-browser-app/deps/noflo/src/lib/Graph.js");
-require.alias("noflo-noflo/src/lib/InternalSocket.js", "noflo-browser-app/deps/noflo/src/lib/InternalSocket.js");
-require.alias("noflo-noflo/src/lib/BasePort.js", "noflo-browser-app/deps/noflo/src/lib/BasePort.js");
-require.alias("noflo-noflo/src/lib/InPort.js", "noflo-browser-app/deps/noflo/src/lib/InPort.js");
-require.alias("noflo-noflo/src/lib/OutPort.js", "noflo-browser-app/deps/noflo/src/lib/OutPort.js");
-require.alias("noflo-noflo/src/lib/Ports.js", "noflo-browser-app/deps/noflo/src/lib/Ports.js");
-require.alias("noflo-noflo/src/lib/Port.js", "noflo-browser-app/deps/noflo/src/lib/Port.js");
-require.alias("noflo-noflo/src/lib/ArrayPort.js", "noflo-browser-app/deps/noflo/src/lib/ArrayPort.js");
-require.alias("noflo-noflo/src/lib/Component.js", "noflo-browser-app/deps/noflo/src/lib/Component.js");
-require.alias("noflo-noflo/src/lib/AsyncComponent.js", "noflo-browser-app/deps/noflo/src/lib/AsyncComponent.js");
-require.alias("noflo-noflo/src/lib/LoggingComponent.js", "noflo-browser-app/deps/noflo/src/lib/LoggingComponent.js");
-require.alias("noflo-noflo/src/lib/ComponentLoader.js", "noflo-browser-app/deps/noflo/src/lib/ComponentLoader.js");
-require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo-browser-app/deps/noflo/src/lib/NoFlo.js");
-require.alias("noflo-noflo/src/lib/Network.js", "noflo-browser-app/deps/noflo/src/lib/Network.js");
-require.alias("noflo-noflo/src/lib/Platform.js", "noflo-browser-app/deps/noflo/src/lib/Platform.js");
-require.alias("noflo-noflo/src/lib/Journal.js", "noflo-browser-app/deps/noflo/src/lib/Journal.js");
-require.alias("noflo-noflo/src/lib/Utils.js", "noflo-browser-app/deps/noflo/src/lib/Utils.js");
-require.alias("noflo-noflo/src/lib/Helpers.js", "noflo-browser-app/deps/noflo/src/lib/Helpers.js");
-require.alias("noflo-noflo/src/lib/Streams.js", "noflo-browser-app/deps/noflo/src/lib/Streams.js");
-require.alias("noflo-noflo/src/components/Graph.js", "noflo-browser-app/deps/noflo/src/components/Graph.js");
-require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo-browser-app/deps/noflo/index.js");
+require.alias("noflo-noflo/src/lib/Graph.js", "c-base-workshop-test/deps/noflo/src/lib/Graph.js");
+require.alias("noflo-noflo/src/lib/InternalSocket.js", "c-base-workshop-test/deps/noflo/src/lib/InternalSocket.js");
+require.alias("noflo-noflo/src/lib/BasePort.js", "c-base-workshop-test/deps/noflo/src/lib/BasePort.js");
+require.alias("noflo-noflo/src/lib/InPort.js", "c-base-workshop-test/deps/noflo/src/lib/InPort.js");
+require.alias("noflo-noflo/src/lib/OutPort.js", "c-base-workshop-test/deps/noflo/src/lib/OutPort.js");
+require.alias("noflo-noflo/src/lib/Ports.js", "c-base-workshop-test/deps/noflo/src/lib/Ports.js");
+require.alias("noflo-noflo/src/lib/Port.js", "c-base-workshop-test/deps/noflo/src/lib/Port.js");
+require.alias("noflo-noflo/src/lib/ArrayPort.js", "c-base-workshop-test/deps/noflo/src/lib/ArrayPort.js");
+require.alias("noflo-noflo/src/lib/Component.js", "c-base-workshop-test/deps/noflo/src/lib/Component.js");
+require.alias("noflo-noflo/src/lib/AsyncComponent.js", "c-base-workshop-test/deps/noflo/src/lib/AsyncComponent.js");
+require.alias("noflo-noflo/src/lib/LoggingComponent.js", "c-base-workshop-test/deps/noflo/src/lib/LoggingComponent.js");
+require.alias("noflo-noflo/src/lib/ComponentLoader.js", "c-base-workshop-test/deps/noflo/src/lib/ComponentLoader.js");
+require.alias("noflo-noflo/src/lib/NoFlo.js", "c-base-workshop-test/deps/noflo/src/lib/NoFlo.js");
+require.alias("noflo-noflo/src/lib/Network.js", "c-base-workshop-test/deps/noflo/src/lib/Network.js");
+require.alias("noflo-noflo/src/lib/Platform.js", "c-base-workshop-test/deps/noflo/src/lib/Platform.js");
+require.alias("noflo-noflo/src/lib/Journal.js", "c-base-workshop-test/deps/noflo/src/lib/Journal.js");
+require.alias("noflo-noflo/src/lib/Utils.js", "c-base-workshop-test/deps/noflo/src/lib/Utils.js");
+require.alias("noflo-noflo/src/lib/Helpers.js", "c-base-workshop-test/deps/noflo/src/lib/Helpers.js");
+require.alias("noflo-noflo/src/lib/Streams.js", "c-base-workshop-test/deps/noflo/src/lib/Streams.js");
+require.alias("noflo-noflo/src/components/Graph.js", "c-base-workshop-test/deps/noflo/src/components/Graph.js");
+require.alias("noflo-noflo/src/lib/NoFlo.js", "c-base-workshop-test/deps/noflo/index.js");
 require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo/index.js");
 require.alias("bergie-emitter/index.js", "noflo-noflo/deps/events/index.js");
 
@@ -16613,21 +16613,21 @@ require.alias("noflo-fbp/lib/fbp.js", "noflo-noflo/deps/fbp/lib/fbp.js");
 require.alias("noflo-fbp/lib/fbp.js", "noflo-noflo/deps/fbp/index.js");
 require.alias("noflo-fbp/lib/fbp.js", "noflo-fbp/index.js");
 require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo-noflo/index.js");
-require.alias("noflo-noflo-dom/components/AddClass.js", "noflo-browser-app/deps/noflo-dom/components/AddClass.js");
-require.alias("noflo-noflo-dom/components/AppendChild.js", "noflo-browser-app/deps/noflo-dom/components/AppendChild.js");
-require.alias("noflo-noflo-dom/components/CreateElement.js", "noflo-browser-app/deps/noflo-dom/components/CreateElement.js");
-require.alias("noflo-noflo-dom/components/CreateFragment.js", "noflo-browser-app/deps/noflo-dom/components/CreateFragment.js");
-require.alias("noflo-noflo-dom/components/GetAttribute.js", "noflo-browser-app/deps/noflo-dom/components/GetAttribute.js");
-require.alias("noflo-noflo-dom/components/GetElement.js", "noflo-browser-app/deps/noflo-dom/components/GetElement.js");
-require.alias("noflo-noflo-dom/components/HasClass.js", "noflo-browser-app/deps/noflo-dom/components/HasClass.js");
-require.alias("noflo-noflo-dom/components/Listen.js", "noflo-browser-app/deps/noflo-dom/components/Listen.js");
-require.alias("noflo-noflo-dom/components/ReadHtml.js", "noflo-browser-app/deps/noflo-dom/components/ReadHtml.js");
-require.alias("noflo-noflo-dom/components/RemoveElement.js", "noflo-browser-app/deps/noflo-dom/components/RemoveElement.js");
-require.alias("noflo-noflo-dom/components/SetAttribute.js", "noflo-browser-app/deps/noflo-dom/components/SetAttribute.js");
-require.alias("noflo-noflo-dom/components/WriteHtml.js", "noflo-browser-app/deps/noflo-dom/components/WriteHtml.js");
-require.alias("noflo-noflo-dom/components/RemoveClass.js", "noflo-browser-app/deps/noflo-dom/components/RemoveClass.js");
-require.alias("noflo-noflo-dom/components/RequestAnimationFrame.js", "noflo-browser-app/deps/noflo-dom/components/RequestAnimationFrame.js");
-require.alias("noflo-noflo-dom/index.js", "noflo-browser-app/deps/noflo-dom/index.js");
+require.alias("noflo-noflo-dom/components/AddClass.js", "c-base-workshop-test/deps/noflo-dom/components/AddClass.js");
+require.alias("noflo-noflo-dom/components/AppendChild.js", "c-base-workshop-test/deps/noflo-dom/components/AppendChild.js");
+require.alias("noflo-noflo-dom/components/CreateElement.js", "c-base-workshop-test/deps/noflo-dom/components/CreateElement.js");
+require.alias("noflo-noflo-dom/components/CreateFragment.js", "c-base-workshop-test/deps/noflo-dom/components/CreateFragment.js");
+require.alias("noflo-noflo-dom/components/GetAttribute.js", "c-base-workshop-test/deps/noflo-dom/components/GetAttribute.js");
+require.alias("noflo-noflo-dom/components/GetElement.js", "c-base-workshop-test/deps/noflo-dom/components/GetElement.js");
+require.alias("noflo-noflo-dom/components/HasClass.js", "c-base-workshop-test/deps/noflo-dom/components/HasClass.js");
+require.alias("noflo-noflo-dom/components/Listen.js", "c-base-workshop-test/deps/noflo-dom/components/Listen.js");
+require.alias("noflo-noflo-dom/components/ReadHtml.js", "c-base-workshop-test/deps/noflo-dom/components/ReadHtml.js");
+require.alias("noflo-noflo-dom/components/RemoveElement.js", "c-base-workshop-test/deps/noflo-dom/components/RemoveElement.js");
+require.alias("noflo-noflo-dom/components/SetAttribute.js", "c-base-workshop-test/deps/noflo-dom/components/SetAttribute.js");
+require.alias("noflo-noflo-dom/components/WriteHtml.js", "c-base-workshop-test/deps/noflo-dom/components/WriteHtml.js");
+require.alias("noflo-noflo-dom/components/RemoveClass.js", "c-base-workshop-test/deps/noflo-dom/components/RemoveClass.js");
+require.alias("noflo-noflo-dom/components/RequestAnimationFrame.js", "c-base-workshop-test/deps/noflo-dom/components/RequestAnimationFrame.js");
+require.alias("noflo-noflo-dom/index.js", "c-base-workshop-test/deps/noflo-dom/index.js");
 require.alias("noflo-noflo-dom/index.js", "noflo-dom/index.js");
 require.alias("noflo-noflo/src/lib/Graph.js", "noflo-noflo-dom/deps/noflo/src/lib/Graph.js");
 require.alias("noflo-noflo/src/lib/InternalSocket.js", "noflo-noflo-dom/deps/noflo/src/lib/InternalSocket.js");
@@ -16659,23 +16659,23 @@ require.alias("noflo-fbp/lib/fbp.js", "noflo-noflo/deps/fbp/lib/fbp.js");
 require.alias("noflo-fbp/lib/fbp.js", "noflo-noflo/deps/fbp/index.js");
 require.alias("noflo-fbp/lib/fbp.js", "noflo-fbp/index.js");
 require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo-noflo/index.js");
-require.alias("noflo-noflo-core/components/Callback.js", "noflo-browser-app/deps/noflo-core/components/Callback.js");
-require.alias("noflo-noflo-core/components/DisconnectAfterPacket.js", "noflo-browser-app/deps/noflo-core/components/DisconnectAfterPacket.js");
-require.alias("noflo-noflo-core/components/Drop.js", "noflo-browser-app/deps/noflo-core/components/Drop.js");
-require.alias("noflo-noflo-core/components/Group.js", "noflo-browser-app/deps/noflo-core/components/Group.js");
-require.alias("noflo-noflo-core/components/Kick.js", "noflo-browser-app/deps/noflo-core/components/Kick.js");
-require.alias("noflo-noflo-core/components/Merge.js", "noflo-browser-app/deps/noflo-core/components/Merge.js");
-require.alias("noflo-noflo-core/components/Output.js", "noflo-browser-app/deps/noflo-core/components/Output.js");
-require.alias("noflo-noflo-core/components/Repeat.js", "noflo-browser-app/deps/noflo-core/components/Repeat.js");
-require.alias("noflo-noflo-core/components/RepeatAsync.js", "noflo-browser-app/deps/noflo-core/components/RepeatAsync.js");
-require.alias("noflo-noflo-core/components/RepeatDelayed.js", "noflo-browser-app/deps/noflo-core/components/RepeatDelayed.js");
-require.alias("noflo-noflo-core/components/SendNext.js", "noflo-browser-app/deps/noflo-core/components/SendNext.js");
-require.alias("noflo-noflo-core/components/Split.js", "noflo-browser-app/deps/noflo-core/components/Split.js");
-require.alias("noflo-noflo-core/components/RunInterval.js", "noflo-browser-app/deps/noflo-core/components/RunInterval.js");
-require.alias("noflo-noflo-core/components/RunTimeout.js", "noflo-browser-app/deps/noflo-core/components/RunTimeout.js");
-require.alias("noflo-noflo-core/components/MakeFunction.js", "noflo-browser-app/deps/noflo-core/components/MakeFunction.js");
-require.alias("noflo-noflo-core/index.js", "noflo-browser-app/deps/noflo-core/index.js");
-require.alias("noflo-noflo-core/components/ReadGlobal.js", "noflo-browser-app/deps/noflo-core/components/ReadGlobal.js");
+require.alias("noflo-noflo-core/components/Callback.js", "c-base-workshop-test/deps/noflo-core/components/Callback.js");
+require.alias("noflo-noflo-core/components/DisconnectAfterPacket.js", "c-base-workshop-test/deps/noflo-core/components/DisconnectAfterPacket.js");
+require.alias("noflo-noflo-core/components/Drop.js", "c-base-workshop-test/deps/noflo-core/components/Drop.js");
+require.alias("noflo-noflo-core/components/Group.js", "c-base-workshop-test/deps/noflo-core/components/Group.js");
+require.alias("noflo-noflo-core/components/Kick.js", "c-base-workshop-test/deps/noflo-core/components/Kick.js");
+require.alias("noflo-noflo-core/components/Merge.js", "c-base-workshop-test/deps/noflo-core/components/Merge.js");
+require.alias("noflo-noflo-core/components/Output.js", "c-base-workshop-test/deps/noflo-core/components/Output.js");
+require.alias("noflo-noflo-core/components/Repeat.js", "c-base-workshop-test/deps/noflo-core/components/Repeat.js");
+require.alias("noflo-noflo-core/components/RepeatAsync.js", "c-base-workshop-test/deps/noflo-core/components/RepeatAsync.js");
+require.alias("noflo-noflo-core/components/RepeatDelayed.js", "c-base-workshop-test/deps/noflo-core/components/RepeatDelayed.js");
+require.alias("noflo-noflo-core/components/SendNext.js", "c-base-workshop-test/deps/noflo-core/components/SendNext.js");
+require.alias("noflo-noflo-core/components/Split.js", "c-base-workshop-test/deps/noflo-core/components/Split.js");
+require.alias("noflo-noflo-core/components/RunInterval.js", "c-base-workshop-test/deps/noflo-core/components/RunInterval.js");
+require.alias("noflo-noflo-core/components/RunTimeout.js", "c-base-workshop-test/deps/noflo-core/components/RunTimeout.js");
+require.alias("noflo-noflo-core/components/MakeFunction.js", "c-base-workshop-test/deps/noflo-core/components/MakeFunction.js");
+require.alias("noflo-noflo-core/index.js", "c-base-workshop-test/deps/noflo-core/index.js");
+require.alias("noflo-noflo-core/components/ReadGlobal.js", "c-base-workshop-test/deps/noflo-core/components/ReadGlobal.js");
 require.alias("noflo-noflo-core/index.js", "noflo-core/index.js");
 require.alias("noflo-noflo/src/lib/Graph.js", "noflo-noflo-core/deps/noflo/src/lib/Graph.js");
 require.alias("noflo-noflo/src/lib/InternalSocket.js", "noflo-noflo-core/deps/noflo/src/lib/InternalSocket.js");
@@ -16710,21 +16710,21 @@ require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo-noflo/index.js");
 require.alias("jashkenas-underscore/underscore.js", "noflo-noflo-core/deps/underscore/underscore.js");
 require.alias("jashkenas-underscore/underscore.js", "noflo-noflo-core/deps/underscore/index.js");
 require.alias("jashkenas-underscore/underscore.js", "jashkenas-underscore/index.js");
-require.alias("noflo-noflo-interaction/components/ListenChange.js", "noflo-browser-app/deps/noflo-interaction/components/ListenChange.js");
-require.alias("noflo-noflo-interaction/components/ListenDrag.js", "noflo-browser-app/deps/noflo-interaction/components/ListenDrag.js");
-require.alias("noflo-noflo-interaction/components/ListenHash.js", "noflo-browser-app/deps/noflo-interaction/components/ListenHash.js");
-require.alias("noflo-noflo-interaction/components/ListenKeyboard.js", "noflo-browser-app/deps/noflo-interaction/components/ListenKeyboard.js");
-require.alias("noflo-noflo-interaction/components/ListenKeyboardShortcuts.js", "noflo-browser-app/deps/noflo-interaction/components/ListenKeyboardShortcuts.js");
-require.alias("noflo-noflo-interaction/components/ListenMouse.js", "noflo-browser-app/deps/noflo-interaction/components/ListenMouse.js");
-require.alias("noflo-noflo-interaction/components/ListenPointer.js", "noflo-browser-app/deps/noflo-interaction/components/ListenPointer.js");
-require.alias("noflo-noflo-interaction/components/ListenResize.js", "noflo-browser-app/deps/noflo-interaction/components/ListenResize.js");
-require.alias("noflo-noflo-interaction/components/ListenScroll.js", "noflo-browser-app/deps/noflo-interaction/components/ListenScroll.js");
-require.alias("noflo-noflo-interaction/components/ListenSpeech.js", "noflo-browser-app/deps/noflo-interaction/components/ListenSpeech.js");
-require.alias("noflo-noflo-interaction/components/ListenTouch.js", "noflo-browser-app/deps/noflo-interaction/components/ListenTouch.js");
-require.alias("noflo-noflo-interaction/components/SetHash.js", "noflo-browser-app/deps/noflo-interaction/components/SetHash.js");
-require.alias("noflo-noflo-interaction/components/ReadCoordinates.js", "noflo-browser-app/deps/noflo-interaction/components/ReadCoordinates.js");
-require.alias("noflo-noflo-interaction/index.js", "noflo-browser-app/deps/noflo-interaction/index.js");
-require.alias("noflo-noflo-interaction/components/ReadGamepad.js", "noflo-browser-app/deps/noflo-interaction/components/ReadGamepad.js");
+require.alias("noflo-noflo-interaction/components/ListenChange.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenChange.js");
+require.alias("noflo-noflo-interaction/components/ListenDrag.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenDrag.js");
+require.alias("noflo-noflo-interaction/components/ListenHash.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenHash.js");
+require.alias("noflo-noflo-interaction/components/ListenKeyboard.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenKeyboard.js");
+require.alias("noflo-noflo-interaction/components/ListenKeyboardShortcuts.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenKeyboardShortcuts.js");
+require.alias("noflo-noflo-interaction/components/ListenMouse.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenMouse.js");
+require.alias("noflo-noflo-interaction/components/ListenPointer.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenPointer.js");
+require.alias("noflo-noflo-interaction/components/ListenResize.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenResize.js");
+require.alias("noflo-noflo-interaction/components/ListenScroll.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenScroll.js");
+require.alias("noflo-noflo-interaction/components/ListenSpeech.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenSpeech.js");
+require.alias("noflo-noflo-interaction/components/ListenTouch.js", "c-base-workshop-test/deps/noflo-interaction/components/ListenTouch.js");
+require.alias("noflo-noflo-interaction/components/SetHash.js", "c-base-workshop-test/deps/noflo-interaction/components/SetHash.js");
+require.alias("noflo-noflo-interaction/components/ReadCoordinates.js", "c-base-workshop-test/deps/noflo-interaction/components/ReadCoordinates.js");
+require.alias("noflo-noflo-interaction/index.js", "c-base-workshop-test/deps/noflo-interaction/index.js");
+require.alias("noflo-noflo-interaction/components/ReadGamepad.js", "c-base-workshop-test/deps/noflo-interaction/components/ReadGamepad.js");
 require.alias("noflo-noflo-interaction/index.js", "noflo-interaction/index.js");
 require.alias("noflo-noflo/src/lib/Graph.js", "noflo-noflo-interaction/deps/noflo/src/lib/Graph.js");
 require.alias("noflo-noflo/src/lib/InternalSocket.js", "noflo-noflo-interaction/deps/noflo/src/lib/InternalSocket.js");
@@ -16756,31 +16756,31 @@ require.alias("noflo-fbp/lib/fbp.js", "noflo-noflo/deps/fbp/lib/fbp.js");
 require.alias("noflo-fbp/lib/fbp.js", "noflo-noflo/deps/fbp/index.js");
 require.alias("noflo-fbp/lib/fbp.js", "noflo-fbp/index.js");
 require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo-noflo/index.js");
-require.alias("noflo-noflo-packets/components/CountPackets.js", "noflo-browser-app/deps/noflo-packets/components/CountPackets.js");
-require.alias("noflo-noflo-packets/components/Unzip.js", "noflo-browser-app/deps/noflo-packets/components/Unzip.js");
-require.alias("noflo-noflo-packets/components/Defaults.js", "noflo-browser-app/deps/noflo-packets/components/Defaults.js");
-require.alias("noflo-noflo-packets/components/DoNotDisconnect.js", "noflo-browser-app/deps/noflo-packets/components/DoNotDisconnect.js");
-require.alias("noflo-noflo-packets/components/DisconnectAfter.js", "noflo-browser-app/deps/noflo-packets/components/DisconnectAfter.js");
-require.alias("noflo-noflo-packets/components/OnlyDisconnect.js", "noflo-browser-app/deps/noflo-packets/components/OnlyDisconnect.js");
-require.alias("noflo-noflo-packets/components/SplitPacket.js", "noflo-browser-app/deps/noflo-packets/components/SplitPacket.js");
-require.alias("noflo-noflo-packets/components/Range.js", "noflo-browser-app/deps/noflo-packets/components/Range.js");
-require.alias("noflo-noflo-packets/components/Flatten.js", "noflo-browser-app/deps/noflo-packets/components/Flatten.js");
-require.alias("noflo-noflo-packets/components/Compact.js", "noflo-browser-app/deps/noflo-packets/components/Compact.js");
-require.alias("noflo-noflo-packets/components/Zip.js", "noflo-browser-app/deps/noflo-packets/components/Zip.js");
-require.alias("noflo-noflo-packets/components/SendWith.js", "noflo-browser-app/deps/noflo-packets/components/SendWith.js");
-require.alias("noflo-noflo-packets/components/FilterPackets.js", "noflo-browser-app/deps/noflo-packets/components/FilterPackets.js");
-require.alias("noflo-noflo-packets/components/FilterByValue.js", "noflo-browser-app/deps/noflo-packets/components/FilterByValue.js");
-require.alias("noflo-noflo-packets/components/FilterByPosition.js", "noflo-browser-app/deps/noflo-packets/components/FilterByPosition.js");
-require.alias("noflo-noflo-packets/components/FilterPacket.js", "noflo-browser-app/deps/noflo-packets/components/FilterPacket.js");
-require.alias("noflo-noflo-packets/components/UniquePacket.js", "noflo-browser-app/deps/noflo-packets/components/UniquePacket.js");
-require.alias("noflo-noflo-packets/components/GroupByPacket.js", "noflo-browser-app/deps/noflo-packets/components/GroupByPacket.js");
-require.alias("noflo-noflo-packets/components/LastPacket.js", "noflo-browser-app/deps/noflo-packets/components/LastPacket.js");
-require.alias("noflo-noflo-packets/components/Counter.js", "noflo-browser-app/deps/noflo-packets/components/Counter.js");
-require.alias("noflo-noflo-packets/index.js", "noflo-browser-app/deps/noflo-packets/index.js");
-require.alias("noflo-noflo-packets/components/Replace.js", "noflo-browser-app/deps/noflo-packets/components/Replace.js");
-require.alias("noflo-noflo-packets/graphs/First.fbp", "noflo-browser-app/deps/noflo-packets/graphs/First.fbp");
-require.alias("noflo-noflo-packets/graphs/MergeConnections.fbp", "noflo-browser-app/deps/noflo-packets/graphs/MergeConnections.fbp");
-require.alias("noflo-noflo-packets/components/Map.js", "noflo-browser-app/deps/noflo-packets/components/Map.js");
+require.alias("noflo-noflo-packets/components/CountPackets.js", "c-base-workshop-test/deps/noflo-packets/components/CountPackets.js");
+require.alias("noflo-noflo-packets/components/Unzip.js", "c-base-workshop-test/deps/noflo-packets/components/Unzip.js");
+require.alias("noflo-noflo-packets/components/Defaults.js", "c-base-workshop-test/deps/noflo-packets/components/Defaults.js");
+require.alias("noflo-noflo-packets/components/DoNotDisconnect.js", "c-base-workshop-test/deps/noflo-packets/components/DoNotDisconnect.js");
+require.alias("noflo-noflo-packets/components/DisconnectAfter.js", "c-base-workshop-test/deps/noflo-packets/components/DisconnectAfter.js");
+require.alias("noflo-noflo-packets/components/OnlyDisconnect.js", "c-base-workshop-test/deps/noflo-packets/components/OnlyDisconnect.js");
+require.alias("noflo-noflo-packets/components/SplitPacket.js", "c-base-workshop-test/deps/noflo-packets/components/SplitPacket.js");
+require.alias("noflo-noflo-packets/components/Range.js", "c-base-workshop-test/deps/noflo-packets/components/Range.js");
+require.alias("noflo-noflo-packets/components/Flatten.js", "c-base-workshop-test/deps/noflo-packets/components/Flatten.js");
+require.alias("noflo-noflo-packets/components/Compact.js", "c-base-workshop-test/deps/noflo-packets/components/Compact.js");
+require.alias("noflo-noflo-packets/components/Zip.js", "c-base-workshop-test/deps/noflo-packets/components/Zip.js");
+require.alias("noflo-noflo-packets/components/SendWith.js", "c-base-workshop-test/deps/noflo-packets/components/SendWith.js");
+require.alias("noflo-noflo-packets/components/FilterPackets.js", "c-base-workshop-test/deps/noflo-packets/components/FilterPackets.js");
+require.alias("noflo-noflo-packets/components/FilterByValue.js", "c-base-workshop-test/deps/noflo-packets/components/FilterByValue.js");
+require.alias("noflo-noflo-packets/components/FilterByPosition.js", "c-base-workshop-test/deps/noflo-packets/components/FilterByPosition.js");
+require.alias("noflo-noflo-packets/components/FilterPacket.js", "c-base-workshop-test/deps/noflo-packets/components/FilterPacket.js");
+require.alias("noflo-noflo-packets/components/UniquePacket.js", "c-base-workshop-test/deps/noflo-packets/components/UniquePacket.js");
+require.alias("noflo-noflo-packets/components/GroupByPacket.js", "c-base-workshop-test/deps/noflo-packets/components/GroupByPacket.js");
+require.alias("noflo-noflo-packets/components/LastPacket.js", "c-base-workshop-test/deps/noflo-packets/components/LastPacket.js");
+require.alias("noflo-noflo-packets/components/Counter.js", "c-base-workshop-test/deps/noflo-packets/components/Counter.js");
+require.alias("noflo-noflo-packets/index.js", "c-base-workshop-test/deps/noflo-packets/index.js");
+require.alias("noflo-noflo-packets/components/Replace.js", "c-base-workshop-test/deps/noflo-packets/components/Replace.js");
+require.alias("noflo-noflo-packets/graphs/First.fbp", "c-base-workshop-test/deps/noflo-packets/graphs/First.fbp");
+require.alias("noflo-noflo-packets/graphs/MergeConnections.fbp", "c-base-workshop-test/deps/noflo-packets/graphs/MergeConnections.fbp");
+require.alias("noflo-noflo-packets/components/Map.js", "c-base-workshop-test/deps/noflo-packets/components/Map.js");
 require.alias("noflo-noflo-packets/index.js", "noflo-packets/index.js");
 require.alias("noflo-noflo/src/lib/Graph.js", "noflo-noflo-packets/deps/noflo/src/lib/Graph.js");
 require.alias("noflo-noflo/src/lib/InternalSocket.js", "noflo-noflo-packets/deps/noflo/src/lib/InternalSocket.js");
@@ -16865,8 +16865,8 @@ require.alias("noflo-noflo/src/lib/NoFlo.js", "noflo-noflo/index.js");
 require.alias("jashkenas-underscore/underscore.js", "noflo-noflo-core/deps/underscore/underscore.js");
 require.alias("jashkenas-underscore/underscore.js", "noflo-noflo-core/deps/underscore/index.js");
 require.alias("jashkenas-underscore/underscore.js", "jashkenas-underscore/index.js");
-require.alias("noflo-noflo-runtime-webrtc/runtime/network.js", "noflo-browser-app/deps/noflo-runtime-webrtc/runtime/network.js");
-require.alias("noflo-noflo-runtime-webrtc/runtime/network.js", "noflo-browser-app/deps/noflo-runtime-webrtc/index.js");
+require.alias("noflo-noflo-runtime-webrtc/runtime/network.js", "c-base-workshop-test/deps/noflo-runtime-webrtc/runtime/network.js");
+require.alias("noflo-noflo-runtime-webrtc/runtime/network.js", "c-base-workshop-test/deps/noflo-runtime-webrtc/index.js");
 require.alias("noflo-noflo-runtime-webrtc/runtime/network.js", "noflo-runtime-webrtc/index.js");
 require.alias("noflo-noflo-runtime-base/src/Base.js", "noflo-noflo-runtime-webrtc/deps/noflo-runtime-base/src/Base.js");
 require.alias("noflo-noflo-runtime-base/src/protocol/Graph.js", "noflo-noflo-runtime-webrtc/deps/noflo-runtime-base/src/protocol/Graph.js");
