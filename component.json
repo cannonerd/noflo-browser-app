@@ -10,6 +10,7 @@
     "noflo/noflo-dom": "*",
     "noflo/noflo-core": "*",
     "noflo/noflo-interaction": "*",
+    "noflo/noflo-packets": "*",
     "noflo/noflo-runtime-webrtc": "*"
   },
   "remotes": [
