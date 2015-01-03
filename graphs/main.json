@@ -3,7 +3,7 @@
         "name": "main",
         "environment": {
             "type": "noflo-browser",
-            "content": "<button id='button'>Go!</button>\n<p id='message'></p>"
+            "content": "<p id=\"output\"> Default output </p>\n<button id=\"button1\">write the text</button>\n<button id=\"button2\">start timer</button>"
         },
         "icon": ""
     },
@@ -11,62 +11,92 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "dom/GetElement_7amk2": {
+        "dom/GetElement_eqk7": {
             "component": "dom/GetElement",
             "metadata": {
                 "label": "dom/GetElement",
-                "x": 252,
-                "y": 180,
+                "x": 360,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
         },
-        "core/Output_cg49": {
-            "component": "core/Output",
-            "metadata": {
-                "label": "core/Output",
-                "x": 432,
-                "y": 360,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "dom/WriteHtml_fpz6j": {
+        "dom/WriteHtml_wsm88": {
             "component": "dom/WriteHtml",
             "metadata": {
                 "label": "dom/WriteHtml",
                 "x": 684,
-                "y": 288,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
         },
-        "dom/GetElement_xvz54": {
-            "component": "dom/GetElement",
+        "core/Output_vrms3": {
+            "component": "core/Output",
             "metadata": {
-                "label": "dom/GetElement",
-                "x": 252,
-                "y": 288,
+                "label": "core/Output",
+                "x": 216,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
         },
-        "interaction/ListenMouse_1l373": {
-            "component": "interaction/ListenMouse",
-            "metadata": {
-                "label": "interaction/ListenMouse",
-                "x": 432,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Kick_ey1nh": {
+        "core/Kick_tps40": {
             "component": "core/Kick",
             "metadata": {
                 "label": "core/Kick",
-                "x": 576,
-                "y": 180,
+                "x": 540,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RunInterval_7gvtq": {
+            "component": "core/RunInterval",
+            "metadata": {
+                "label": "core/RunInterval",
+                "x": 504,
+                "y": -144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Drop_k3k6p": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "core/Drop",
+                "x": 792,
+                "y": -180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "packets/Counter_owqu9": {
+            "component": "packets/Counter",
+            "metadata": {
+                "label": "packets/Counter",
+                "x": 648,
+                "y": -216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "c-base-workshop-test/ListenClick": {
+            "component": "c-base-workshop-test/ListenClick",
+            "metadata": {
+                "label": "ListenClick",
+                "x": 180,
+                "y": -108,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "c-base-workshop-test/ListenClick_ohf8t": {
+            "component": "c-base-workshop-test/ListenClick",
+            "metadata": {
+                "label": "c-base-workshop-test/ListenClick",
+                "x": 108,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -75,95 +105,165 @@
     "connections": [
         {
             "src": {
-                "process": "dom/GetElement_xvz54",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "dom/WriteHtml_fpz6j",
-                "port": "container"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "dom/GetElement_7amk2",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "interaction/ListenMouse_1l373",
-                "port": "element"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "dom/GetElement_7amk2",
+                "process": "dom/GetElement_eqk7",
                 "port": "error"
             },
             "tgt": {
-                "process": "core/Output_cg49",
+                "process": "core/Output_vrms3",
                 "port": "in"
             },
             "metadata": {
-                "route": 1
+                "route": 10
             }
         },
         {
             "src": {
-                "process": "dom/GetElement_xvz54",
-                "port": "error"
-            },
-            "tgt": {
-                "process": "core/Output_cg49",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 1
-            }
-        },
-        {
-            "src": {
-                "process": "interaction/ListenMouse_1l373",
-                "port": "click"
-            },
-            "tgt": {
-                "process": "core/Kick_ey1nh",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "core/Kick_ey1nh",
+                "process": "core/Kick_tps40",
                 "port": "out"
             },
             "tgt": {
-                "process": "dom/WriteHtml_fpz6j",
+                "process": "dom/WriteHtml_wsm88",
                 "port": "html"
             },
             "metadata": {}
         },
         {
-            "data": "#button",
+            "src": {
+                "process": "core/RunInterval_7gvtq",
+                "port": "out"
+            },
             "tgt": {
-                "process": "dom/GetElement_7amk2",
+                "process": "packets/Counter_owqu9",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "packets/Counter_owqu9",
+                "port": "count"
+            },
+            "tgt": {
+                "process": "dom/WriteHtml_wsm88",
+                "port": "html"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "packets/Counter_owqu9",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Drop_k3k6p",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "c-base-workshop-test/ListenClick",
+                "port": "getelement_error"
+            },
+            "tgt": {
+                "process": "core/Output_vrms3",
+                "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "c-base-workshop-test/ListenClick",
+                "port": "listenmouse_click"
+            },
+            "tgt": {
+                "process": "core/RunInterval_7gvtq",
+                "port": "start"
+            }
+        },
+        {
+            "src": {
+                "process": "c-base-workshop-test/ListenClick_ohf8t",
+                "port": "getelement_error"
+            },
+            "tgt": {
+                "process": "core/Output_vrms3",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "dom/GetElement_eqk7",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "dom/WriteHtml_wsm88",
+                "port": "container"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "c-base-workshop-test/ListenClick_ohf8t",
+                "port": "listenmouse_click"
+            },
+            "tgt": {
+                "process": "core/Kick_tps40",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "#output",
+            "tgt": {
+                "process": "dom/GetElement_eqk7",
                 "port": "selector"
             }
         },
         {
-            "data": "#message",
+            "data": "foo bar",
             "tgt": {
-                "process": "dom/GetElement_xvz54",
-                "port": "selector"
+                "process": "dom/WriteHtml_wsm88",
+                "port": "html"
             }
         },
         {
-            "data": "Hello World!",
+            "data": "foo bar",
             "tgt": {
-                "process": "core/Kick_ey1nh",
+                "process": "core/Kick_tps40",
                 "port": "data"
+            }
+        },
+        {
+            "data": 1000,
+            "tgt": {
+                "process": "core/RunInterval_7gvtq",
+                "port": "interval"
+            }
+        },
+        {
+            "data": true,
+            "tgt": {
+                "process": "packets/Counter_owqu9",
+                "port": "immediate"
+            }
+        },
+        {
+            "data": "#button1",
+            "tgt": {
+                "process": "c-base-workshop-test/ListenClick_ohf8t",
+                "port": "selector"
+            }
+        },
+        {
+            "data": "#button2",
+            "tgt": {
+                "process": "c-base-workshop-test/ListenClick",
+                "port": "selector"
             }
         }
     ]

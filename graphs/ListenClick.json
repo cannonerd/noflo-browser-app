@@ -1,0 +1,85 @@
+{
+    "properties": {
+        "name": "ListenClick",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {
+        "selector": {
+            "process": "dom/GetElement_rxuw1",
+            "port": "selector",
+            "metadata": {
+                "x": 36,
+                "y": -144,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "outports": {
+        "getelement_error": {
+            "process": "dom/GetElement_rxuw1",
+            "port": "error",
+            "metadata": {
+                "x": 0,
+                "y": 0,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "listenmouse_click": {
+            "process": "interaction/ListenMouse_af0f9",
+            "port": "click",
+            "metadata": {
+                "x": 0,
+                "y": 0,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "groups": [],
+    "processes": {
+        "dom/GetElement_rxuw1": {
+            "component": "dom/GetElement",
+            "metadata": {
+                "label": "dom/GetElement",
+                "x": 180,
+                "y": -108,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "interaction/ListenMouse_af0f9": {
+            "component": "interaction/ListenMouse",
+            "metadata": {
+                "label": "interaction/ListenMouse",
+                "x": 360,
+                "y": -144,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "dom/GetElement_rxuw1",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "interaction/ListenMouse_af0f9",
+                "port": "element"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "#button2",
+            "tgt": {
+                "process": "dom/GetElement_rxuw1",
+                "port": "selector"
+            }
+        }
+    ]
+}
